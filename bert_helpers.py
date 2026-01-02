@@ -69,20 +69,17 @@ def _normalize_poleval(text):
 
 def poleval_accuracy_strict(df, qa_pipe):
     correct = 0
-
     for row in df.itertuples():
         out = qa_pipe(
             question=row.question,
             context=row.context,
             topk=1
         )
-
         pred = _normalize_poleval(out["answer"])
         golds = [_normalize_poleval(a) for a in row.answers]
 
         if pred in golds:
             correct += 1
-
     return correct / len(df)
 
 
