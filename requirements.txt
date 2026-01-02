@@ -1,0 +1,13 @@
+weaviate-client
+pandas
+numpy
+gensim
+faiss-cpu
+scikit-learn
+datasets
+transformers
+torch
+torchvision
+peft
+trl
+bitsandbytes
