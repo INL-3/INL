@@ -11,3 +11,4 @@ torchvision
 peft
 trl
 bitsandbytes
+rapidfuzz
